@@ -31,7 +31,7 @@ const City = () => {
             setError("Error: The request has timed out.");
         }
         request.send();
-    });
+    },[]);
     useEffect(() => {
         setSubHeading("All Cities");
     }, [pathname]);
@@ -55,22 +55,24 @@ const City = () => {
                 }
 
                 {cities &&
-                    <div className="city-container">
-                        <div className="city-list">
-                            {cities.map((city) => (
-                                <NavLink key={city.id}
-                                         className={({isActive}) => isActive ? "active" : ""}
-                                         to="#"
-                                >
-                                    <span>&nbsp;</span>
-                                    <div>{city.name}</div>
-                                </NavLink>
-                            ))}
+                    <>
+                        <div className="city-container">
+                            <div className="city-list">
+                                {cities.map((city) => (
+                                    <NavLink key={city.city_id}
+                                             className={({isActive}) => isActive ? "active" : ""}
+                                             to="#"
+                                    >
+                                        <span>&nbsp;</span>
+                                        <div>{city.city_name}</div>
+                                    </NavLink>
+                                ))}
+                            </div>
+                            <div className="city-item">
+                                City details
+                            </div>
                         </div>
-                        <div className="city-item">
-                            City details
-                        </div>
-                    </div>
+                    </>
                 }
 
             </div>
