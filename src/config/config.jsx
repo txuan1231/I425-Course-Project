@@ -1,4 +1,4 @@
 //system settings
 export const settings = {
-    baseApiUrl: "http://localhost/I425/mycollege-api/api/v1"
+    baseApiUrl: "http://localhost/I425/Course-project/api/v1"
 }

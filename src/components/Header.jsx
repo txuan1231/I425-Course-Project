@@ -23,7 +23,7 @@ const Header = () => {
                         <Nav className="me-auto">
                             <NavLink to="/" className={className}>Home</NavLink>
                             <div className="nav-separator">|</div>
-                            <NavLink to="/properties" className={className}>Property</NavLink>
+                            <NavLink to="/cities" className={className}>City</NavLink>
                         </Nav>
                     </Navbar.Collapse>
                 </Container>
