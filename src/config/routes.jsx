@@ -28,18 +28,15 @@ const AppRoutes = () => {
                 <Routes>
                     <Route path="/" element={<Layout/>}>
                         <Route index element={<Home/>}/>
-                        <Route path="/signin" element={<Signin/>}/>
-                        <Route path="/signout" element={<Signout/>}/>
-                        <Route path="/signup" element={<Signup/>}/>
                         <Route path="cities" element={<Cities/>}>
                             <Route index element={<p>Select a city to view details.</p>}/>
                             <Route path=":cityId" element={<City/>}>
                                 <Route path="properties" element={<Properties />}/>
                             </Route>
-
-
-
                         </Route>
+                        <Route path="/signin" element={<Signin/>}/>
+                        <Route path="/signout" element={<Signout/>}/>
+                        <Route path="/signup" element={<Signup/>}/>
                         <Route path="*" element={<NoMatch/>}/>
                     </Route>
                 </Routes>
