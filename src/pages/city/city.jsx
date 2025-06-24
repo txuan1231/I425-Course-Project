@@ -1,6 +1,6 @@
 import { settings } from "../../config/config";
 import useXmlHttp from "../../services/useXmlHttp.jsx";
-import { useParams, useOutletContext } from "react-router-dom";
+import {useParams, useOutletContext, Link, Outlet} from "react-router-dom";
 import "../../assets/css/city.css";
 import React, { useEffect } from "react";
 const City = () => {
@@ -27,7 +27,7 @@ const City = () => {
                 </div>
             )}
 
-            {city && (
+            {city && <>
                 <div className="city-details">
                     <div>
                         <strong>State:</strong> {city.state}
@@ -35,8 +35,12 @@ const City = () => {
                     <div>
                         <strong>Population:</strong> {city.population}
                     </div>
+                    <Link to={`/cities/${city.city_id}/properties`}> Click here to view properties</Link>
                 </div>
-            )}
+                <div className="city-properties">
+                    <Outlet/>
+                </div>
+            </>}
         </>
     );
 };

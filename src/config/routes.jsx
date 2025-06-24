@@ -18,6 +18,7 @@ import Signup from "../pages/auth/signup";
 import Cities from "../pages/city/cities";
 import RequireAuth from "../components/RequireAuth";
 import City from "../pages/city/city";
+import Properties from"../pages/property/properties";
 
 
 const AppRoutes = () => {
@@ -32,7 +33,12 @@ const AppRoutes = () => {
                         <Route path="/signup" element={<Signup/>}/>
                         <Route path="cities" element={<Cities/>}>
                             <Route index element={<p>Select a city to view details.</p>}/>
-                            <Route path=":cityId" element={<City/>} />
+                            <Route path=":cityId" element={<City/>}>
+                                <Route path="properties" element={<Properties />}/>
+                            </Route>
+
+
+
                         </Route>
                         <Route path="*" element={<NoMatch/>}/>
                     </Route>
