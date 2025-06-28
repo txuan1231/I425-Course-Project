@@ -19,7 +19,7 @@ import Cities from "../pages/city/cities";
 import RequireAuth from "../components/RequireAuth";
 import City from "../pages/city/city";
 import Properties from"../pages/property/properties";
-
+import Housetypes from "../pages/housetype/housetypes";
 
 const AppRoutes = () => {
     return (
@@ -34,6 +34,11 @@ const AppRoutes = () => {
                                 <Route path="properties" element={<Properties />}/>
                             </Route>
                         </Route>
+                        <Route path="housetypes" element={
+                            <RequireAuth>
+                                <Housetypes />
+                            </RequireAuth>
+                        }></Route>
                         <Route path="/signin" element={<Signin/>}/>
                         <Route path="/signout" element={<Signout/>}/>
                         <Route path="/signup" element={<Signup/>}/>
