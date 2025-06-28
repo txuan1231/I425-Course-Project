@@ -1,0 +1,132 @@
+/*
+*  styles for realtor-related elements
+ */
+.realtor-container{
+    margin: 10px auto;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+.realtor-container > div:nth-child(odd) {
+    background-color: #f8f9fa;
+}
+.realtor-row {
+    width: 100%;
+    min-height: 35px;
+    padding-left: 5px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    border-bottom: 1px solid #e4f1fe;
+}
+
+.realtor-row-header {
+    font-weight: bold;
+    font-size: 14px;
+    color: #22252c;
+    background-color: #cccccc !important;
+    border-top: 1px solid #e4f1fe;
+}
+
+.realtor-row .realtor-info {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+.realtor-info div {
+    margin-right: 2px;
+}
+
+.realtor-id {
+    width: 10%;
+}
+
+.realtor-name {
+    width: 25%;
+}
+
+.realtor-email {
+    width: 45%;
+}
+
+.realtor-phone {
+    width: 20%;
+}
+
+.realtor-state {
+    width: 10%;
+}
+
+/* styles for the add realtor row */
+.realtor-row input {
+    border: 1px solid #cccccc;
+    width: 100%;
+    padding: 0px 5px;
+}
+
+
+/* styles for edit and delete buttons */
+
+.realtor-row .realtor-buttons {
+    min-width: 190px;
+    text-align: right;
+}
+
+button.button-light {
+    margin: 0px 2px;
+    width: 75px;
+    border: #4D90C6 solid 1px;
+    border-radius: 0.25rem;
+}
+
+button.button-create {
+    margin: 0px 2px;
+    padding: 2px 10px;
+    border: #4D90C6 solid 1px;
+    border-radius: 0.25rem;
+}
+
+button.button-light:hover,
+button.button-create:hover
+{
+    color: #212529;
+    background-color: #e2e6ea;
+    border-color: #dae0e5;
+}
+
+button:disabled,
+button[disabled],
+button:disabled:hover {
+    border-color: #cccccc;
+    background-color: rgba(239, 239, 239, 0.3);
+    color: rgba(16, 16, 16, 0.3)
+}
+
+/* styles for the create and edit realtor forms */
+.form-realtor .form-group {
+    display: flex;
+    padding: 10px 5px;
+}
+
+.form-realtor .form-group label {
+    width: 100px;
+    margin-top: 6px;
+    margin-right: 10px;
+    text-align: right;
+    font-weight: 500;
+}
+
+.form-realtor .form-group input {
+    width: 100%;
+    padding: 0.375rem 0.75rem;
+    border: 1px solid #ced4da;
+    border-radius: 0.25rem;
+}
+
+.form-realtor-errors {
+    font-size: small;
+    color: red;
+}
