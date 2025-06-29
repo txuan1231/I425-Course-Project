@@ -3,7 +3,7 @@ import useXmlHttp from "../../services/useXmlHttp.jsx";
 import {useParams, useOutletContext, Link, Outlet} from "react-router-dom";
 import "../../assets/css/city.css";
 import React, { useEffect } from "react";
-const City = () => {
+const Cities = () => {
     const {user} = useAuth();
     const [subHeading, setSubHeading] = useOutletContext();
     const { cityId } = useParams();
@@ -46,4 +46,4 @@ const City = () => {
     );
 };
 
-export default City;
+export default Cities;
