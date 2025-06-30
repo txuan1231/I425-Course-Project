@@ -82,19 +82,21 @@ button.button-light {
     border-radius: 0.25rem;
 }
 
-button.button-create {
-    margin: 0px 2px;
-    padding: 2px 10px;
-    border: #4D90C6 solid 1px;
+.button-create {
+    padding: 6px 12px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #fff;
+    background-color: #198754; /* Bootstrap green */
+    border: 1px solid #198754;
     border-radius: 0.25rem;
+    transition: background-color 0.3s ease;
 }
 
-button.button-light:hover,
-button.button-create:hover
-{
-    color: #212529;
-    background-color: #e2e6ea;
-    border-color: #dae0e5;
+.button-create:hover {
+    background-color: #157347;
+    border-color: #157347;
+    color: #fff;
 }
 
 button:disabled,
