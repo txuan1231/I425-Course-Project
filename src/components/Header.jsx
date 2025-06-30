@@ -28,6 +28,11 @@ const Header = () => {
                             <div className="nav-separator">|</div>
                             <NavLink to="/cities" className={className}>City</NavLink>
                             <div className="nav-separator">|</div>
+                            <NavLink to="/housetypes" className={className}>House Type</NavLink>
+                            <div className="nav-separator">|</div>
+                            <NavLink to="/realtors" className={className}>Realtor</NavLink>
+
+                            <div className="nav-separator">|</div>
                             {isAuthed
                                 ? <NavLink to="/signout" className={className}>Sign out</NavLink>
                                 : <NavLink to="/signin" className={className}>Sign in/Sign up</NavLink>
